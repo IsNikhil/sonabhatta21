@@ -1,6 +1,6 @@
 "use client";
 
-import { Box, Typography, Grid, Chip, Button } from "@mui/material"; // Standard MUI v5 Grid
+import { Box, Typography, Chip, Button, Grid } from "@mui/material"; // standard Grid
 import AutoAwesomeIcon from "@mui/icons-material/AutoAwesome";
 import { useRouter } from "next/navigation";
 
@@ -29,7 +29,7 @@ export default function AboutMe() {
       {/* SKILLS */}
       <Grid container spacing={2} sx={{ mb: 4 }}>
         {skills.map((skill) => (
-          <Grid item xs={6} sm={3} key={skill}>
+          <Grid item xs={6} sm={3} key={skill} component="div"> {/* Fix for TS/Netlify */}
             <Chip
               icon={<AutoAwesomeIcon />}
               label={skill}
