@@ -1,7 +1,6 @@
 "use client";
 
-import { Box, Typography, Chip, Button } from "@mui/material";
-import Grid from "@mui/material/Unstable_Grid2"; // Correct Grid import for v6+
+import { Box, Typography, Grid, Chip, Button } from "@mui/material"; // Standard MUI v5 Grid
 import AutoAwesomeIcon from "@mui/icons-material/AutoAwesome";
 import { useRouter } from "next/navigation";
 
@@ -30,7 +29,7 @@ export default function AboutMe() {
       {/* SKILLS */}
       <Grid container spacing={2} sx={{ mb: 4 }}>
         {skills.map((skill) => (
-          <Grid xs={6} sm={3} key={skill}>
+          <Grid item xs={6} sm={3} key={skill}>
             <Chip
               icon={<AutoAwesomeIcon />}
               label={skill}
