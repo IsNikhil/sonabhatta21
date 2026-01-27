@@ -1,6 +1,6 @@
 "use client";
 
-import { Box, Typography, Grid, Chip, Button } from "@mui/material"; // make sure this is Grid2 if using v6+
+import { Box, Typography, Grid, Chip, Button } from "@mui/material"; // Make sure this is Grid2 if using @mui/material v6+
 import AutoAwesomeIcon from "@mui/icons-material/AutoAwesome";
 import { useRouter } from "next/navigation";
 
@@ -26,69 +26,53 @@ export default function AboutMe() {
 
       {/* SKILLS */}
       <Grid container spacing={2} sx={{ mb: 4 }}>
-        <Grid xs={6} sm={3}>
-          <Chip
-            icon={<AutoAwesomeIcon />}
-            label="Networking"
-            color="primary"
-            variant="outlined"
-          />
-        </Grid>
-        <Grid xs={6} sm={3}>
-          <Chip
-            icon={<AutoAwesomeIcon />}
-            label="Databases"
-            color="primary"
-            variant="outlined"
-          />
-        </Grid>
-        <Grid xs={6} sm={3}>
-          <Chip
-            icon={<AutoAwesomeIcon />}
-            label="Web Development"
-            color="primary"
-            variant="outlined"
-          />
-        </Grid>
-        <Grid xs={6} sm={3}>
-          <Chip
-            icon={<AutoAwesomeIcon />}
-            label="Women in Tech Advocate"
-            color="primary"
-            variant="outlined"
-          />
-        </Grid>
+        {[
+          "Networking",
+          "Databases",
+          "Web Development",
+          "Women in Tech Advocate",
+        ].map((skill) => (
+          <Grid xs={6} sm={3} key={skill}>
+            <Chip
+              icon={<AutoAwesomeIcon />}
+              label={skill}
+              color="primary"
+              variant="outlined"
+            />
+          </Grid>
+        ))}
       </Grid>
 
       {/* ABOUT TEXT */}
-      <Typography variant="body1" sx={{ mb: 3, lineHeight: 1.7 }}>
-        Hi! I am Sona Bhatta, a Junior Information Technology student graduating in
-        May 2027. I am passionate about exploring the ever-evolving world of
-        technology, with a particular interest in networking, databases, and web
-        development.
-      </Typography>
+      <Box sx={{ mb: 4 }}>
+        <Typography variant="body1" sx={{ mb: 3, lineHeight: 1.7 }}>
+          Hi! I am Sona Bhatta, a Junior Information Technology student graduating in
+          May 2027. I am passionate about exploring the ever-evolving world of
+          technology, with a particular interest in networking, databases, and web
+          development.
+        </Typography>
 
-      <Typography variant="body1" sx={{ mb: 3, lineHeight: 1.7 }}>
-        As a tech enthusiast, I enjoy taking on new challenges, learning
-        innovative solutions, and applying my skills to real-world projects. I
-        am especially committed to supporting women in tech, believing that
-        diversity and inclusion drive creativity and progress in the industry.
-      </Typography>
+        <Typography variant="body1" sx={{ mb: 3, lineHeight: 1.7 }}>
+          As a tech enthusiast, I enjoy taking on new challenges, learning
+          innovative solutions, and applying my skills to real-world projects. I
+          am especially committed to supporting women in tech, believing that
+          diversity and inclusion drive creativity and progress in the industry.
+        </Typography>
 
-      <Typography variant="body1" sx={{ mb: 3, lineHeight: 1.7 }}>
-        Beyond academics, I stay engaged with emerging technologies, experiment
-        with coding projects, and connect with like-minded individuals who share
-        a passion for technology and problem-solving.
-      </Typography>
+        <Typography variant="body1" sx={{ mb: 3, lineHeight: 1.7 }}>
+          Beyond academics, I stay engaged with emerging technologies, experiment
+          with coding projects, and connect with like-minded individuals who share
+          a passion for technology and problem-solving.
+        </Typography>
 
-      <Typography variant="body1" sx={{ mb: 4, lineHeight: 1.7 }}>
-        I am excited to continue growing as a developer, contributing to
-        meaningful projects, and making a positive impact in the tech community.
-      </Typography>
+        <Typography variant="body1" sx={{ lineHeight: 1.7 }}>
+          I am excited to continue growing as a developer, contributing to
+          meaningful projects, and making a positive impact in the tech community.
+        </Typography>
+      </Box>
 
       {/* CTA BUTTONS */}
       <Box sx={{ display: "flex", gap: 2, flexWrap: "wrap" }}>
-        {/* Download Resume */}
         <Button
           variant="contained"
           sx={{
@@ -105,7 +89,6 @@ export default function AboutMe() {
           Download Resume
         </Button>
 
-        {/* View Portfolio */}
         <Button
           variant="outlined"
           sx={{
