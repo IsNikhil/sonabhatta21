@@ -1,6 +1,7 @@
 "use client";
 
-import { Box, Typography, Grid, Chip, Button } from "@mui/material"; // Make sure this is Grid2 if using @mui/material v6+
+import { Box, Typography, Chip, Button } from "@mui/material";
+import Grid from "@mui/material/Unstable_Grid2"; // Correct Grid import for v6+
 import AutoAwesomeIcon from "@mui/icons-material/AutoAwesome";
 import { useRouter } from "next/navigation";
 
@@ -10,6 +11,8 @@ export default function AboutMe() {
   const handleViewPortfolio = () => {
     router.push("/"); // navigate to home page
   };
+
+  const skills = ["Networking", "Databases", "Web Development", "Women in Tech Advocate"];
 
   return (
     <Box sx={{ p: 3, maxWidth: 900, mx: "auto" }}>
@@ -26,12 +29,7 @@ export default function AboutMe() {
 
       {/* SKILLS */}
       <Grid container spacing={2} sx={{ mb: 4 }}>
-        {[
-          "Networking",
-          "Databases",
-          "Web Development",
-          "Women in Tech Advocate",
-        ].map((skill) => (
+        {skills.map((skill) => (
           <Grid xs={6} sm={3} key={skill}>
             <Chip
               icon={<AutoAwesomeIcon />}
