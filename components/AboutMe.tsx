@@ -1,6 +1,6 @@
 "use client";
 
-import { Box, Typography, Grid, Chip, Button } from "@mui/material";
+import { Box, Typography, Grid, Chip, Button } from "@mui/material"; // make sure this is Grid2 if using v6+
 import AutoAwesomeIcon from "@mui/icons-material/AutoAwesome";
 import { useRouter } from "next/navigation";
 
@@ -26,7 +26,7 @@ export default function AboutMe() {
 
       {/* SKILLS */}
       <Grid container spacing={2} sx={{ mb: 4 }}>
-        <Grid item xs={6} sm={3}>
+        <Grid xs={6} sm={3}>
           <Chip
             icon={<AutoAwesomeIcon />}
             label="Networking"
@@ -34,7 +34,7 @@ export default function AboutMe() {
             variant="outlined"
           />
         </Grid>
-        <Grid item xs={6} sm={3}>
+        <Grid xs={6} sm={3}>
           <Chip
             icon={<AutoAwesomeIcon />}
             label="Databases"
@@ -42,7 +42,7 @@ export default function AboutMe() {
             variant="outlined"
           />
         </Grid>
-        <Grid item xs={6} sm={3}>
+        <Grid xs={6} sm={3}>
           <Chip
             icon={<AutoAwesomeIcon />}
             label="Web Development"
@@ -50,7 +50,7 @@ export default function AboutMe() {
             variant="outlined"
           />
         </Grid>
-        <Grid item xs={6} sm={3}>
+        <Grid xs={6} sm={3}>
           <Chip
             icon={<AutoAwesomeIcon />}
             label="Women in Tech Advocate"
