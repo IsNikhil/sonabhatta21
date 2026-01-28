@@ -1,5 +1,5 @@
 import { Box, Typography, Chip, Button } from "@mui/material";
-import Grid from "@mui/material/Grid";
+import Grid from "@mui/material/Grid2";
 import AutoAwesomeIcon from "@mui/icons-material/AutoAwesome";
 import { useRouter } from "next/navigation";
 
@@ -7,7 +7,7 @@ export default function AboutMe() {
   const router = useRouter();
 
   const handleViewPortfolio = () => {
-    router.push("/"); // navigate to home page
+    router.push("/");
   };
 
   const skills = [
@@ -33,7 +33,7 @@ export default function AboutMe() {
       {/* SKILLS */}
       <Grid container spacing={2} sx={{ mb: 4 }}>
         {skills.map((skill) => (
-          <Grid item xs={6} sm={3} key={skill}>
+          <Grid xs={6} sm={3} key={skill}>
             <Chip
               icon={<AutoAwesomeIcon />}
               label={skill}
