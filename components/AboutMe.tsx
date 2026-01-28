@@ -9,7 +9,12 @@ export default function AboutMe() {
     router.push("/"); // navigate to home page
   };
 
-  const skills = ["Networking", "Databases", "Web Development", "Women in Tech Advocate"];
+  const skills = [
+    "Networking",
+    "Databases",
+    "Web Development",
+    "Women in Tech Advocate",
+  ];
 
   return (
     <Box sx={{ p: 3, maxWidth: 900, mx: "auto" }}>
@@ -19,15 +24,15 @@ export default function AboutMe() {
           Sona Bhatta
         </Typography>
         <Typography variant="body1" sx={{ color: "text.secondary", mt: 0.5 }}>
-          Junior | Information Technology | Graduating May 2027 | Incoming Network
-          Services Engineering Intern @ Cleco
+          Junior | Information Technology | Graduating May 2027 | Incoming
+          Network Services Engineering Intern @ Cleco
         </Typography>
       </Box>
 
       {/* SKILLS */}
       <Grid container spacing={2} sx={{ mb: 4 }}>
         {skills.map((skill) => (
-          <Grid item xs={6} sm={3} key={skill}> {/* ✅ Just 'item', remove component="div" */}
+          <Grid item xs={6} sm={3} key={skill}>
             <Chip
               icon={<AutoAwesomeIcon />}
               label={skill}
@@ -41,28 +46,29 @@ export default function AboutMe() {
       {/* ABOUT TEXT */}
       <Box sx={{ mb: 4 }}>
         <Typography variant="body1" sx={{ mb: 3, lineHeight: 1.7 }}>
-          Hi! I am Sona Bhatta, a Junior Information Technology student graduating in
-          May 2027. I am passionate about exploring the ever-evolving world of
-          technology, with a particular interest in networking, databases, and web
-          development.
+          Hi! I am Sona Bhatta, a Junior Information Technology student
+          graduating in May 2027. I am passionate about exploring the
+          ever-evolving world of technology, with a particular interest in
+          networking, databases, and web development.
         </Typography>
 
         <Typography variant="body1" sx={{ mb: 3, lineHeight: 1.7 }}>
           As a tech enthusiast, I enjoy taking on new challenges, learning
-          innovative solutions, and applying my skills to real-world projects. I
-          am especially committed to supporting women in tech, believing that
+          innovative solutions, and applying my skills to real-world projects.
+          I am especially committed to supporting women in tech, believing that
           diversity and inclusion drive creativity and progress in the industry.
         </Typography>
 
         <Typography variant="body1" sx={{ mb: 3, lineHeight: 1.7 }}>
-          Beyond academics, I stay engaged with emerging technologies, experiment
-          with coding projects, and connect with like-minded individuals who share
-          a passion for technology and problem-solving.
+          Beyond academics, I stay engaged with emerging technologies,
+          experiment with coding projects, and connect with like-minded
+          individuals who share a passion for technology and problem-solving.
         </Typography>
 
         <Typography variant="body1" sx={{ lineHeight: 1.7 }}>
           I am excited to continue growing as a developer, contributing to
-          meaningful projects, and making a positive impact in the tech community.
+          meaningful projects, and making a positive impact in the tech
+          community.
         </Typography>
       </Box>
 
