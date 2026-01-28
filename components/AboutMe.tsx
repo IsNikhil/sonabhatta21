@@ -1,4 +1,5 @@
-import { Box, Typography, Grid, Chip, Button } from "@mui/material";
+import { Box, Typography, Chip, Button } from "@mui/material";
+import Grid from "@mui/material/Grid";
 import AutoAwesomeIcon from "@mui/icons-material/AutoAwesome";
 import { useRouter } from "next/navigation";
 
@@ -46,23 +47,23 @@ export default function AboutMe() {
       {/* ABOUT TEXT */}
       <Box sx={{ mb: 4 }}>
         <Typography variant="body1" sx={{ mb: 3, lineHeight: 1.7 }}>
-          Hi! I am Sona Bhatta, a Junior Information Technology student
-          graduating in May 2027. I am passionate about exploring the
-          ever-evolving world of technology, with a particular interest in
-          networking, databases, and web development.
+          Hi! I am Sona Bhatta, a Junior Information Technology student graduating
+          in May 2027. I am passionate about exploring the ever-evolving world of
+          technology, with a particular interest in networking, databases, and
+          web development.
         </Typography>
 
         <Typography variant="body1" sx={{ mb: 3, lineHeight: 1.7 }}>
           As a tech enthusiast, I enjoy taking on new challenges, learning
-          innovative solutions, and applying my skills to real-world projects.
-          I am especially committed to supporting women in tech, believing that
+          innovative solutions, and applying my skills to real-world projects. I
+          am especially committed to supporting women in tech, believing that
           diversity and inclusion drive creativity and progress in the industry.
         </Typography>
 
         <Typography variant="body1" sx={{ mb: 3, lineHeight: 1.7 }}>
-          Beyond academics, I stay engaged with emerging technologies,
-          experiment with coding projects, and connect with like-minded
-          individuals who share a passion for technology and problem-solving.
+          Beyond academics, I stay engaged with emerging technologies, experiment
+          with coding projects, and connect with like-minded individuals who
+          share a passion for technology and problem-solving.
         </Typography>
 
         <Typography variant="body1" sx={{ lineHeight: 1.7 }}>
