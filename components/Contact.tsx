@@ -12,11 +12,11 @@ export default function Contact() {
       </Typography>
 
       <Grid container spacing={2} sx={{ mb: 3 }}>
-        <Grid item xs={12} sm={6} sx={{ display: "flex", alignItems: "center", gap: 1 }}>
+        <Grid size={{ xs: 12, sm: 6 }} sx={{ display: "flex", alignItems: "center", gap: 1 }}>
           <PhoneIcon color="primary" />
           <Typography variant="body1">9853636822</Typography>
         </Grid>
-        <Grid item xs={12} sm={6} sx={{ display: "flex", alignItems: "center", gap: 1 }}>
+        <Grid size={{ xs: 12, sm: 6 }} sx={{ display: "flex", alignItems: "center", gap: 1 }}>
           <EmailIcon color="primary" />
           <Box>
             <Link href="mailto:sona.bhatta@selu.edu" underline="hover" color="inherit">

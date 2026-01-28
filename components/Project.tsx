@@ -68,7 +68,7 @@ export default function Projects() {
 
       <Grid container spacing={4}>
         {projects.map((project, index) => (
-          <Grid item xs={12} md={4} key={index}>
+          <Grid size={{ xs: 12, md: 4 }} key={index}>
             <Card
               sx={{
                 height: "100%",

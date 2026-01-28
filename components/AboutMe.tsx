@@ -1,5 +1,4 @@
-import { Box, Typography, Chip, Button } from "@mui/material";
-import Grid from "@mui/material/Grid2";
+import { Box, Typography, Chip, Button, Grid } from "@mui/material";
 import AutoAwesomeIcon from "@mui/icons-material/AutoAwesome";
 import { useRouter } from "next/navigation";
 
@@ -33,7 +32,7 @@ export default function AboutMe() {
       {/* SKILLS */}
       <Grid container spacing={2} sx={{ mb: 4 }}>
         {skills.map((skill) => (
-          <Grid xs={6} sm={3} key={skill}>
+          <Grid size={{ xs: 6, sm: 3 }} key={skill}>
             <Chip
               icon={<AutoAwesomeIcon />}
               label={skill}
